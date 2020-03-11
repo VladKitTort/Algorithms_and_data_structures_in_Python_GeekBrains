@@ -1,6 +1,7 @@
 # Написать два алгоритма нахождения i-го по счёту простого числа. Функция нахождения простого числа должна принимать
 # на вход натуральное и возвращать соответствующее простое число. Проанализировать скорость и сложность алгоритмов.
-#
+# Для выполнения данной задачи я бы выбрал 1 вариант, так как он работает быстрее, хоть по своей структуре немного
+# сложнее второго варианта.
 
 import timeit
 import cProfile
@@ -32,9 +33,9 @@ print(timeit.timeit('op_1(1200)', number=100, globals=globals()))  # 0.7268668
 print(timeit.timeit('op_1(3600)', number=100, globals=globals()))  # 2.1101974
 
 
-cProfile.run('op_1(900)')  # 1    0.004    0.004    0.005    0.005 lesson_4_2_1.py:5(sieve)
-cProfile.run('op_1(1200)')  # 1    0.006    0.006    0.007    0.007 lesson_4_2_1.py:5(sieve)
-cProfile.run('op_1(3600)')  # 1    0.015    0.015    0.019    0.019 lesson_4_2_1.py:5(sieve)
+cProfile.run('op_1(900)')  # 1    0.004    0.004    0.005    0.005 lesson_4_2.py:5(sieve)
+cProfile.run('op_1(1200)')  # 1    0.006    0.006    0.007    0.007 lesson_4_2.py:5(sieve)
+cProfile.run('op_1(3600)')  # 1    0.015    0.015    0.019    0.019 lesson_4_2.py:5(sieve)
 
 # 2 Вариант. Квадратичная функция.
 
@@ -60,9 +61,10 @@ print(timeit.timeit('op_2(600)', number=100, globals=globals()))  # 51.552808899
 print(timeit.timeit('op_2(800)', number=100, globals=globals()))  # 89.60953310000001
 
 
-cProfile.run('op_2(400)')  # 1    0.002    0.002    0.002    0.002 lesson_4_2_1.py:29(op)
-cProfile.run('op_2(600)')  # 1    0.004    0.004    0.004    0.004 lesson_4_2_1.py:29(op)
-cProfile.run('op_2(800)')  # 1    0.006    0.006    0.006    0.006 lesson_4_2_1.py:29(op)
+cProfile.run('op_2(400)')  # 1    0.002    0.002    0.002    0.002 lesson_4_2.py:29(op)
+cProfile.run('op_2(600)')  # 1    0.004    0.004    0.004    0.004 lesson_4_2.py:29(op)
+cProfile.run('op_2(800)')  # 1    0.006    0.006    0.006    0.006 lesson_4_2.py:29(op)
 
 print(op_1(200))
 print(op_2(220))
+
