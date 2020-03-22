@@ -1,9 +1,7 @@
-from random import randint
+from random import random
 
 SIZE = 20
-MIN_ITEM = 0
-MAX_ITEM = 50
-array = [randint(MIN_ITEM, MAX_ITEM - 1) for _ in range(SIZE)]
+array = [(random() * 49.999999999999) for _ in range(SIZE)]
 
 
 def array_in_half(arr):
